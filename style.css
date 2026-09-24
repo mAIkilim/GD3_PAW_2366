@@ -5,4 +5,15 @@ body {
 h1 {
     color: navy;
     text-align: center;
+    
+}
+
+#judul{ 
+    color: green; text-align: center; 
+
+}
+
+p.bio {
+    color: #444;
+    font-style: italic;
 }
