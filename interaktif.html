@@ -12,14 +12,14 @@
 
 <body>
 
-    <h1>Halaman Interaktif Saya</h1>
+    <h1 id="judulHalaman">Halaman Interaktif Saya</h1>
 
     <nav>
         <a href="profil.html">Halaman Profil</a>
         <a href="form.html">Form Pendaftaran</a>
     </nav>
 
-    <h2>Latihan JavaScript Console</h2>
+    <h2>Latihan JavaScript Console dan DOM</h2>
 
     <p>
         Tekan F12 dan buka tab Console
@@ -31,6 +31,12 @@
 
         const angka = 5 * 4;
         console.log(angka);
+
+        const judul = document.getElementById("judulHalaman");
+
+        judul.style.color = "red";
+
+        console.log(judul.innerHTML);
     </script>
 
 </body>
