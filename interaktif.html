@@ -4,7 +4,6 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <title>Halaman Interaktif</title>
     <link rel="stylesheet" href="style.css">
 </head>
@@ -33,8 +32,21 @@
         Ubah ke Biru
     </button>
 
-    <script>
+    <h2>Latihan Dialog Box</h2>
 
+    <label for="inputNama">Masukkan Nama:</label>
+
+    <input
+        type="text"
+        id="inputNama"
+        placeholder="Masukkan nama Anda"
+    >
+
+    <button onclick="tampilkanNama()">
+        Tampilkan
+    </button>
+
+    <script>
         console.log("Halo dari JavaScript!");
 
         const angka = 5 * 4;
@@ -50,16 +62,22 @@
             return "Halo, " + nama + "!";
         }
 
-        console.log(sapa("LIM"));
+        console.log(sapa("Sonik"));
 
         function ubahBiru() {
-
             const teks = document.getElementById("teks");
-
             teks.style.color = "blue";
-
         }
 
+        function tampilkanNama() {
+            const nama = document.getElementById("inputNama").value;
+
+            if (nama.trim() === "") {
+                alert("Silakan isi nama dulu.");
+            } else {
+                alert("Halo, " + nama + "!");
+            }
+        }
     </script>
 
 </body>
