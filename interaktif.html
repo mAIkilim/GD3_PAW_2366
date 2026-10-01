@@ -13,8 +13,15 @@
     <h1 id="judulHalaman">Halaman Interaktif Saya</h1>
 
     <nav>
-        <a href="profil.html">Halaman Profil</a>
-        <a href="form.html">Form Pendaftaran</a>
+        <a href="profil.html"
+           onclick="return confirm('Yakin ingin membuka Halaman Profil?')">
+            Halaman Profil
+        </a>
+
+        <a href="form.html"
+           onclick="return confirm('Yakin ingin membuka Form Pendaftaran?')">
+            Form Pendaftaran
+        </a>
     </nav>
 
     <h2>Latihan JavaScript Console</h2>
@@ -46,7 +53,24 @@
         Tampilkan
     </button>
 
+    <h2>Kalkulator Kuadrat</h2>
+
+    <label for="inputAngka">Masukkan Angka:</label>
+
+    <input
+        type="number"
+        id="inputAngka"
+        placeholder="Masukkan angka"
+    >
+
+    <button onclick="hitungKuadrat()">
+        Hitung
+    </button>
+
+    <p id="hasilKuadrat"></p>
+
     <script>
+
         console.log("Halo dari JavaScript!");
 
         const angka = 5 * 4;
@@ -78,6 +102,22 @@
                 alert("Halo, " + nama + "!");
             }
         }
+
+        function hitungKuadrat() {
+            const input = document.getElementById("inputAngka").value;
+
+            if (input.trim() === "") {
+                alert("Silakan masukkan angka terlebih dahulu!");
+                return;
+            }
+
+            const angka = Number(input);
+            const hasil = angka * angka;
+
+            document.getElementById("hasilKuadrat").textContent =
+                "Hasil kuadrat: " + hasil;
+        }
+
     </script>
 
 </body>
